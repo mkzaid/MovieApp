@@ -1,0 +1,14 @@
+
+#navbar{
+    width:100vw;
+    height: 35vh;
+    background-image: url('../img/joel-muniz-f86RSR2IlYw-unsplash.jpg');
+    background-position:center center ;
+    background-size: cover;
+    /* background-repeat: no-repeat */
+}
+
+#logo img{
+    width: 60px;
+    height: 35px;
+}
