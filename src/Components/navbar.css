@@ -2,13 +2,44 @@
 #navbar{
     width:100vw;
     height: 35vh;
-    background-image: url('../img/joel-muniz-f86RSR2IlYw-unsplash.jpg');
+    background: linear-gradient(to top, #512affba, #6246d2cc), url('../img/joel-muniz-f86RSR2IlYw-unsplash.jpg');
     background-position:center center ;
     background-size: cover;
     /* background-repeat: no-repeat */
 }
 
 #logo img{
-    width: 60px;
+    margin:10px 0px 0px 10px ;
+    width: 113px;
+    height: 41px;
+}
+.navbar_elements{
+    display: flex;
+    flex-direction: row;
+    width:100vw;
+    justify-content: space-around   ;
+}
+.navLinks{
+    display: flex;
+    flex-direction: row;
+}
+.navLinks li{
+  text-decoration: none;
+  list-style: none;
+  margin:10px;
+  color: white;
+  cursor: pointer;
+}
+#login{
+    margin: 20px;
+    border: none;
+    width: 70px;
     height: 35px;
+    border-radius: 4px;
+}
+
+#navbar h1{
+    text-align: center;
+    font-weight: 300;
+    color: white;
 }
