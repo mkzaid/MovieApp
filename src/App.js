@@ -1,5 +1,6 @@
 
 import './App.css';
+import MovieData from './Components/MovieData';
 import Navbar from './Components/Navbar';
 import SearchBar from './Components/SearchBar';
 
@@ -8,6 +9,7 @@ function App() {
     <>         
       <Navbar/>
       <SearchBar/>
+      <MovieData/>
     </>
   );
 }

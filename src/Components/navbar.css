@@ -1,10 +1,10 @@
 
 #navbar{
-    width:100vw;
     height: 35vh;
     background: linear-gradient(to top, #512affba, #6246d2cc), url('../img/joel-muniz-f86RSR2IlYw-unsplash.jpg');
     background-position:center center ;
     background-size: cover;
+    
     /* background-repeat: no-repeat */
 }
 
@@ -16,7 +16,7 @@
 .navbar_elements{
     display: flex;
     flex-direction: row;
-    width:100vw;
+    width:100%;
     justify-content: space-around   ;
 }
 .navLinks{

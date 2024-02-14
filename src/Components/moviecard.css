@@ -1,0 +1,44 @@
+*{ margin: 0;
+padding: 0;
+
+}
+.parentContainer{
+    width: 200px;
+    height: 360px;
+    margin:0px 10px;
+}
+.imgPre img{
+    width: 10rem;
+    height: 15rem;
+    border-radius: 10px;
+}
+.title{
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.cardMinorDetails{
+    display: flex;
+    justify-content: space-between;
+    width: 10rem;
+    flex-direction: row;
+    color: grey;
+}
+.releaseDate{
+    display: inline;
+    font-size: .9rem;
+    
+}
+.cardMinorDetails li{
+    font-size: .9rem !Important ; 
+
+}
+.type{
+    display: inline;
+    border: 1px solid grey;
+    border-radius: 3px;
+    font-size: .7rem;
+    padding: 0px 4px 0px 2px;
+    margin-bottom: 2px;
+
+}
