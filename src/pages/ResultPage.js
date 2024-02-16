@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import logo from '../img/logo.png'
 import NavList from '../Components/NavList'
+
+import {useData}from '../context/DataContext'
+
 const ResultPage = () => {
+
+const data = useData()
+
+
+console.log(data);
+
   return (
     <>
     <div>
