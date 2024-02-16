@@ -4,6 +4,7 @@
     background: linear-gradient(to top, #512affba, #6246d2cc), url('../img/joel-muniz-f86RSR2IlYw-unsplash.jpg');
     background-position:center center ;
     background-size: cover;
+    margin-bottom: '8rem';
     
     /* background-repeat: no-repeat */
 }
@@ -23,7 +24,7 @@
     display: flex;
     flex-direction: row;
 }
-.navLinks li{
+.navLink{
   text-decoration: none;
   list-style: none;
   margin:10px;

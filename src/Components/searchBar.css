@@ -4,6 +4,7 @@
     position: absolute;
     display: flex;
     justify-content: center;
+    margin-bottom: '8rem';
 }
 .container{
     width: 100%;

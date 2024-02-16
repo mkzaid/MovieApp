@@ -1,18 +1,17 @@
 import React from 'react'
 import "./navbar.css"
-
+import { Link } from 'react-router-dom'
 const NavList = () => {
   return (
-    <div className='parent' >
+    <div >
 
         <ul className='navLinks' >
-        <li>Home</li>
-        <li>Genre</li>
-        <li>Country</li>
-        <li>Movies</li>
-        <li>TV Shows</li>
-        <li>Top IMDB</li>
-        <li>Android App</li>
+        <Link  className='navLink'   to='/' >Home</Link>
+        <Link  className='navLink' to='/' >Genre</Link>
+        <Link  className='navLink' to='/' >Country</Link>
+        <Link  className='navLink' to='/' >Movies</Link>
+        <Link  className='navLink' to='/' >TV Shows</Link>
+        <Link  className='navLink' to='/' >Top IMDB</Link>
         </ul>
 
     </div>
