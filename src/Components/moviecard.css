@@ -5,11 +5,10 @@ padding: 0;
 .parentContainer{
     width: 200px;
     height: 360px;
-    margin:0px 10px;
 }
 .imgPre img{
-    width: 10rem;
-    height: 15rem;
+    width: 11.5rem;
+    height: 17rem;
     border-radius: 10px;
 }
 .title{

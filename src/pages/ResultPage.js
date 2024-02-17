@@ -1,16 +1,15 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import logo from '../img/logo.png'
 import NavList from '../Components/NavList'
 
-import {useData}from '../context/DataContext'
+import MovieData from '../Components/MovieData'
 
-const ResultPage = () => {
+const ResultPage = ({querryState}) => {
 
-const data = useData()
+  let value = encodeURIComponent(querryState)
 
-
-console.log(data);
-
+  const url = `https://api.themoviedb.org/3/search/multi?query=${value}&include_adult=false&language=en-US&page=1`;
+     
   return (
     <>
     <div>
@@ -30,6 +29,7 @@ console.log(data);
                       border:'none', width:'70px', height:'35px', background:'white', borderRadius:'10px',cursor:'pointer', marginRight:'3rem' 
                  }} >Login</button>
                 </div>   
+                <MovieData pagination={true} dataType={'popular'} urlSearch={url}  isSearch={true} querry = {querryState} title={`Search Results for "${querryState}"`}  />
     </div>
     </>
   )
