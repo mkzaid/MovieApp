@@ -12,7 +12,7 @@ export const useData = () => {
 
 export const DataContext = ({ children }) => {
 
-  const fetchingData = async (url , setData) => {
+  const fetchingData = async (url , setData , setTotalPages) => {
     console.log(url);
       const options = {
       method: 'GET',
@@ -24,6 +24,7 @@ export const DataContext = ({ children }) => {
     const res = await fetch(url, options)
       const json = await res.json();
       setData(json.results)
+      setTotalPages(json.total_pages)
   }
 
   return (

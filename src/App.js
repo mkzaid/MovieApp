@@ -8,7 +8,9 @@ import { useState } from 'react';
 
 
 function App() {
+
   const [querryState, setQuerry] = useState('')
+  
   return (
     <>         
     <DataContext>

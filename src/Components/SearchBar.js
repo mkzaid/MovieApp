@@ -1,33 +1,19 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, {  useRef } from 'react';
 import './searchBar.css';
 import { useNavigate } from 'react-router-dom';
 
 
-  const SearchBar = ({setQuerry , querryState}) => {
-    const navigate = useNavigate();
+  const SearchBar = ({setQuerry}) => {
+
+
     const querry = useRef(null)
+    const navigate = useNavigate();
+
     const handleChange = ()=>{
-    navigate("/search")
-    setQuerry(querry.current.value)
-      }
-   
-  useEffect(()=>{
-    let url = `https://api.themoviedb.org/3/search/movie?query=${querryState}&api_key=eb8243911afceb1b5cc7d67399a4e07b`
-    const options={
-           method:'GET',
-           header:{
-             accept:'application/json'
-             // Authorization:'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlYjgyNDM5MTFhZmNlYjFiNWNjN2Q2NzM5OWE0ZTA3YiIsInN1YiI6IjY1Y2I3MjBiMWMwOWZiMDE4MjM4YTFhNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.9J_RqxFNdaKFt6A34JxC_bR_KMoZhqUeNlfP3CWivsc'
-           }
-   }
-    const searchQuerry = async()=>{
-             const res = await fetch(url,options)
-             const json = await res.json()
-    } 
-    searchQuerry();
-  },[querryState])
-
-
+      navigate("/search")
+      setQuerry(querry.current.value)
+    }
+    
 
   return (
 

@@ -4,21 +4,23 @@ import MovieCard from './MovieCard';
 import Pagination from './Pagination';
 import { useData } from '../context/DataContext';
 
-const MovieData = ({pagination, dataType, title , querryState ,isSearch,urlSearch }) => {
+const MovieData = ({pagination, dataType, title , querryState ,isSearch,urlSearch , page, setPage }) => {
+  //Fetching Data Calling Function from context
    const{fetchingData} = useData();
+  //  Defining States
    const [data, setData] = useState([])
-
-  const [page , setPage] = useState(1)
-  
-  let url = `https://api.themoviedb.org/3/movie/${dataType}?language=en-US&page=${page}`;
+   const [totalPages, setTotalPages] = useState(1)
+  //Defining Variable
+  let url = `https://api.themoviedb.org/3/movie/${dataType}?language=en-US&page=1`;
+  //Other Hooks
   useEffect(() => {
     if(isSearch){
-      fetchingData(urlSearch , setData)
+      fetchingData(urlSearch , setData, setTotalPages)
     }else{
-      fetchingData(url , setData);
+      fetchingData(url , setData , setTotalPages);
     }
   }, [page])
-              console.log(querryState);
+  // Rest of the Logic / Functionality
   return (
 
     <>
@@ -30,14 +32,14 @@ const MovieData = ({pagination, dataType, title , querryState ,isSearch,urlSearc
            </h1>
       </div>
 
-      { pagination && data.filter((item)=>item.poster_path!=null).length>19&& <Pagination   page = {page} setPage = {setPage} />}
+      { pagination && <Pagination  totalPages={totalPages}   page = {page} setPage = {setPage} />}
       <div className='movieList' style={{
          display: 'flex', flexDirection: 'row', flexWrap: 'wrap',
         
-        margin: '0rem 1rem', justifyContent:'center'
+        margin: '0rem 1rem 0rem 2.2rem',
         
       }} >
-        {data.filter((item,ind)=>ind<18&&item.poster_path!=null ||item.known_for!=null ).map((movie) => {
+        { data.filter((item,ind)=>ind<18).map((movie) => {
           return <MovieCard imgUrl={movie.poster_path} movieName={movie.title} key={movie.id} movieDate={movie.release_date}  />
         })}
       </div>

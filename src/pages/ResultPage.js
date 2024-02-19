@@ -1,15 +1,22 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import logo from '../img/logo.png'
 import NavList from '../Components/NavList'
 
 import MovieData from '../Components/MovieData'
 
 const ResultPage = ({querryState}) => {
-
+ const navigate = useNavigate();
   let value = encodeURIComponent(querryState)
+  const [page , setPage] = useState(1)
 
-  const url = `https://api.themoviedb.org/3/search/multi?query=${value}&include_adult=false&language=en-US&page=1`;
-     
+
+  const url = `https://api.themoviedb.org/3/search/movie?query=${value}&include_adult=false&language=en-US&page=${page}`;
+    //  Further Functionality
+    useEffect(()=>{
+      if(querryState=="")
+             navigate("/")
+    },[])
   return (
     <>
     <div>
@@ -29,7 +36,7 @@ const ResultPage = ({querryState}) => {
                       border:'none', width:'70px', height:'35px', background:'white', borderRadius:'10px',cursor:'pointer', marginRight:'3rem' 
                  }} >Login</button>
                 </div>   
-                <MovieData pagination={true} dataType={'popular'} urlSearch={url}  isSearch={true} querry = {querryState} title={`Search Results for "${querryState}"`}  />
+                <MovieData pagination={true} page={page}  setPage= {setPage}  urlSearch={url}  isSearch={true}  title={`Search Results for "${querryState}"`}  />
     </div>
     </>
   )

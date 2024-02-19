@@ -1,6 +1,7 @@
 import React from 'react'
-import cardPic from '../img/demo.jpg';
 import './moviecard.css';
+
+
 const MovieCard = ({imgUrl, movieName,movieDate}) => {
   return (
     <div className='parentContainer' >

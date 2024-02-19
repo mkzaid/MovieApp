@@ -6,7 +6,7 @@ const Home = ({setQuerry , querryState}) => {
   return (
     <div>
       <Navbar/>
-      <SearchBar setQuerry={setQuerry} querryState={querryState} />
+      <SearchBar setQuerry={setQuerry}  />
       <MovieData pagination={false}  dataType={'now_playing'} title={"Trending"} />
       <MovieData pagination={false}  dataType={'top_rated'} title={"Top Rated"} />
       <MovieData pagination={false}  dataType={'popular'} title={"Popular"} />

@@ -1,11 +1,12 @@
 
 
-const Pagination = ({page , setPage}) => {
+const Pagination = ({page , setPage , totalPages}) => {
       const handleDecrement = ()=>{
          if(page>1){
                  setPage(page-1);
          }
       }
+       console.log(totalPages);
     return (
         <div>
             <div style={{display:'flex', flexDirection:'row',width:'100%',justifyContent:'center' ,marginBottom:'2rem' }} >
