@@ -25,6 +25,7 @@ export const DataContext = ({ children }) => {
       const json = await res.json();
       setData(json.results)
       setTotalPages(json.total_pages)
+      console.log(json.total_pages);
   }
 
   return (

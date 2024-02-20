@@ -32,7 +32,7 @@ const MovieData = ({pagination, dataType, title , querryState ,isSearch,urlSearc
            </h1>
       </div>
 
-      { pagination && <Pagination  totalPages={totalPages}   page = {page} setPage = {setPage} />}
+      { pagination && <Pagination  totalPage={totalPages}   page = {page} setPage = {setPage} />}
       <div className='movieList' style={{
          display: 'flex', flexDirection: 'row', flexWrap: 'wrap',
         
