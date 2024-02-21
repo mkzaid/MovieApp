@@ -1,12 +1,13 @@
 import React from 'react'
 import './moviecard.css';
+import defaultPic from '../img/demo.jpg'
 
 
 const MovieCard = ({imgUrl, movieName,movieDate}) => {
   return (
     <div className='parentContainer' >
         <div className="imgPre">
-          <img src={`https://image.tmdb.org/t/p/w500/${imgUrl}`} />
+          <img src={`https://image.tmdb.org/t/p/w500/${imgUrl}`} onError={(event)=>event.currentTarget.src=defaultPic} />
             </div>
             <div className="cardDetails">
                 <p className="title">{movieName}</p>   
