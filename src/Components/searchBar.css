@@ -1,17 +1,18 @@
-
+*{
+    box-sizing: border-box;
+}
 .searchBar{
     width: 100%;
-    position: absolute;
     display: flex;
     justify-content: center;
     margin-bottom: '8rem';
+    transform: translateY(-20px);
 }
 .container{
     width: 100%;
     display: flex;
-    justify-content: center;
-    position: relative;
-    top: -30px;
+    justify-content: center;    
+    
 }
 #searchIcon{
     position: relative;
@@ -40,4 +41,54 @@
     background-color: rgb(117, 22, 205);
     margin-left:15px;
     cursor: pointer;
+}
+
+/* Search Preview  */
+.searchPreviewParent{
+    width: 100%;
+    /* border: 1px solid black; */
+    position: absolute;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+.searchPreview{
+    overflow-y: scroll;
+    width: 60%;
+    /* border: 1px solid purple; */
+    display: flex;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;  ;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 1rem;
+   background-color: white;
+   transform: translateX(-40px);
+}
+.searchPreview::-webkit-scrollbar {
+    display: none;
+  }
+.oneMovie{
+    width: 90%;
+    /* border: 1px solid red; */
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+
+}
+.oneMovie img{
+    width: 100px;
+    height: 120px;
+    border-radius: 10px;
+}
+.oneMovieDetails{
+    display: flex;
+    flex-direction: column;
+   margin-left: 5px;
+   padding: 5px;
+}
+
+.oneMovieDetails h4{
+    font-weight: 500;
+    letter-spacing: 1px;
 }

@@ -13,7 +13,6 @@ const MovieCard = ({imgUrl, movieName,movieDate}) => {
                 <p className="title">{movieName}</p>   
                 <div className="cardMinorDetails">
                 <p className='releaseDate' >{movieDate.split('-')[0]}</p>
-                <li>132m</li>
                 <p className='type' >Movie</p>
                 
             </div>
