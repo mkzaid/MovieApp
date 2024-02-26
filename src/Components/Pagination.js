@@ -7,7 +7,14 @@ const Pagination = ({ page, setPage, totalPage }) => {
       const [first ,setFirst] = useState(1)
       const [second,setSecond] =useState(2)
       const [third , setThrid] = useState(3)
-    console.log(totalPage);
+      const [focus, setFocus] = useState({
+        option1: false,
+        option2: false,
+        option3: false,
+        all: false,
+    });
+
+    console.log(focus);
     return (
         <div className="App  ">
        <div style={{width:"100%", display:'flex', justifyContent:'center', marginBottom:'1rem'}} >
@@ -34,15 +41,26 @@ const Pagination = ({ page, setPage, totalPage }) => {
                </button>
 
               }
-               <button className='allBtn numbers' onClick={()=>setPage(first)} >
-                {first }
+               <button className='allBtn numbers' onClick={(e)=>{setPage(first)
+              setFocus({option1:true,option2:false, option3:false, all:false})
+              if(focus.option1)e.target.classList.add('focus')
+              }} >
+                {first }  
                </button>
-               <button className='allBtn numbers' onClick={()=>setPage(second)}  >
+             
+            {
+               totalPage>1 && <button className='allBtn numbers' onClick={()=>{setPage(second)
+                setFocus({option1:false,option2:true, option3:false, all:false})} }  >
                 {second}
                </button>
-               <button className='allBtn numbers' onClick={()=>setPage(third) }>
+              } 
+              {totalPage>2&&
+               <button className='allBtn numbers' onClick={()=>{setPage(third) 
+                setFocus({option1:false,option2:false, option3:true, all:false})}}>
                 {third}
                </button>
+              }
+            
                {
                  third<totalPage &&
                  <button className='allBtn' onClick={()=>{if(page<totalPage-2)

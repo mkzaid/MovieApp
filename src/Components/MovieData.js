@@ -24,7 +24,7 @@ const MovieData = ({pagination, dataType, title , querryState ,isSearch,urlSearc
   return (
 
     <>
-    <div style={{marginTop:'5rem'}} >
+    <div style={{marginTop:'2rem'}} >
 
       <div className="titleDataComponent">
            <h1 style={{fontSize:'2rem' , fontWeight:'300', margin:'1rem 2rem' }} >

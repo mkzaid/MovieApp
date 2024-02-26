@@ -48,17 +48,18 @@
     width: 100%;
     /* border: 1px solid black; */
     position: absolute;
-    height: 550px;
+    height: 450px;
     display: flex;
     justify-content: center;
     z-index: 10;
+    transform: translateY(-23px);
 }
 .searchPreview{
     overflow-y: scroll;
     width: 60%;
     /* border: 1px solid purple; */
     display: flex;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;  ;
+    box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;  ;
     flex-direction: column;
     padding: 5px;
     border-radius: 1rem;
@@ -77,8 +78,8 @@
 
 }
 .oneMovie img{
-    width: 100px;
-    height: 120px;
+    width: 80px;
+    height: 90px;
     border-radius: 10px;
 }
 .oneMovieDetails{
@@ -90,5 +91,9 @@
 
 .oneMovieDetails h4{
     font-weight: 500;
+    font-size: .9rem;
     letter-spacing: 1px;
+}
+.oneMovieDetails p{
+    font-size: .8rem;
 }
