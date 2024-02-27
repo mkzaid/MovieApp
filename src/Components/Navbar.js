@@ -4,7 +4,7 @@ import movieLogo from '../img/logo.png';
 import NavList from './NavList';
 const Navbar = () => {
   return (
-    <div  id='navbar'  >
+    <div  id='navbar'>
               <div className='navbar_elements' >
                     <div id='logo'>
                       <img   src={movieLogo} alt='logo'/>

@@ -75,7 +75,7 @@
     margin: 5px;
     display: flex;
     flex-direction: row;
-
+    
 }
 .oneMovie img{
     width: 80px;
@@ -93,7 +93,13 @@
     font-weight: 500;
     font-size: .9rem;
     letter-spacing: 1px;
+    cursor: pointer;
+}
+.oneMovieDetails h4:hover{
+    color: rgb(26, 123, 155);
 }
 .oneMovieDetails p{
     font-size: .8rem;
+    margin-top: 4px;
+    cursor: pointer;
 }

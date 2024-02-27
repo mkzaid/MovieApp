@@ -62,7 +62,6 @@ const SearchBar = ({setQuerry}) => {
 
 }
 const MovieComponent = ({imgUrl , movieName, movieDate , overView})=>{
-  let length = 20
   function TextAbstract(text, length) {
     if (text == null) {
         return "";
@@ -87,7 +86,7 @@ const MovieComponent = ({imgUrl , movieName, movieDate , overView})=>{
         <div className='oneMovieDetails'>
         <h4>{movieName}</h4>
         <p className='overView' >{TextAbstract(overView,200)}</p>
-        <p className='releaseDate' > Release Date : <strong>{movieDate}</strong></p>
+        <p className='releaseDate' > Release Date : {movieDate}</p>
         </div>
         </div>
       

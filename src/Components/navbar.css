@@ -30,6 +30,7 @@
   margin:10px;
   color: white;
   cursor: pointer;
+  font-weight: 300  ;
 }
 #login{
     margin: 20px;
