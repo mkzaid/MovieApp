@@ -13,8 +13,8 @@ const MovieCard = ({imgUrl, movieName,movieDate}) => {
         return text;
     }
     text = text.substring(0, length);
-   let last = text.lastIndexOf(" ");
-    text = text.substring(0, last);
+  //  let last = text.lastIndexOf(" ");
+    // text = text.substring(0, last);
     return text + "...";
 }
 
@@ -30,7 +30,7 @@ const MovieCard = ({imgUrl, movieName,movieDate}) => {
       </div>
             </div>
             <div className="cardDetails">
-                <p className="title">{TextAbstract(movieName,20)}</p>   
+                <p className="title">{TextAbstract(movieName,18)}</p>   
                 <div className="cardMinorDetails">
                 <p className='releaseDate' >{movieDate.split('-')[0]}</p>
                 <p className='type' >Movie</p>

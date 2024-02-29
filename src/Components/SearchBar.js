@@ -6,28 +6,30 @@ import { useData } from '../context/DataContext';
 
 
 
-const SearchBar = ({setQuerry}) => {
-  const [input ,setInput] = useState("")
+const SearchBar = () => {
   const [data, setData] = useState([])
   const [ visible, setVisible] = useState(false)
   const [pages , setTotalPage] = useState(1)
-  const {fetchingData} = useData();
+  const {fetchingData ,setQuerry , setResult } = useData();
   
    const querry = useRef(null)
    const navigate = useNavigate();
    let timer;
    const handleClick = ()=>{
+    setResult({
+  search:true,
+   genre:false,
+   country:false
+    })
      navigate("/search")
      setQuerry(querry.current.value)
     }
     const handleChange = (e)=>{
-      console.log(querry.current);
       clearTimeout(timer)
       timer =  setTimeout((first, setData , setTotalPage)=>{
         let value = encodeURIComponent(first)
        const url = `https://api.themoviedb.org/3/search/movie?query=${value}&include_adult=false&language=en-US&page=1`;
         fetchingData(url , setData , setTotalPage)
-        console.log(data);
       },100,e.currentTarget.value , setData , setTotalPage)
     }
 
@@ -70,8 +72,8 @@ const MovieComponent = ({imgUrl , movieName, movieDate , overView})=>{
         return text;
     }
     text = text.substring(0, length);
-   let last = text.lastIndexOf(" ");
-    text = text.substring(0, last);
+  //  let last = text.lastIndexOf(" ");
+    // text = text.substring(0, last);
     return text + "...";
 }
 

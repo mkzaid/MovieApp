@@ -9,15 +9,14 @@ import { useState } from 'react';
 
 function App() {
 
-  const [querryState, setQuerry] = useState('')
   
   return (
     <>         
     <DataContext>
     <Router>
       <Routes>
-        <Route exact path="/" element={<Home setQuerry={setQuerry} querryState={querryState} />} />
-        <Route exact path="/search" element={<ResultPage  querryState={querryState} />} />
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/search" element={<ResultPage />} />
       </Routes>
     </Router>
     </DataContext>

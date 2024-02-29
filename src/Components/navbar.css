@@ -1,7 +1,7 @@
 
 #navbar{
     height: 35vh;
-    background: linear-gradient(to top, #512affba, #6246d2cc), url('../img/joel-muniz-f86RSR2IlYw-unsplash.jpg');
+    background: linear-gradient(to top, #512affba, #db3acdcc), url('../img/joel-muniz-f86RSR2IlYw-unsplash.jpg');
     background-position:center center ;
     background-size: cover;
     margin-bottom: '8rem';
