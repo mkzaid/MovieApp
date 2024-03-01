@@ -10,17 +10,12 @@ const SearchBar = () => {
   const [data, setData] = useState([])
   const [ visible, setVisible] = useState(false)
   const [pages , setTotalPage] = useState(1)
-  const {fetchingData ,setQuerry , setResult } = useData();
+  const {fetchingData ,setQuerry } = useData();
   
    const querry = useRef(null)
    const navigate = useNavigate();
    let timer;
    const handleClick = ()=>{
-    setResult({
-  search:true,
-   genre:false,
-   country:false
-    })
      navigate("/search")
      setQuerry(querry.current.value)
     }

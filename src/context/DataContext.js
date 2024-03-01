@@ -12,11 +12,6 @@ export const useData = () => {
 
 export const DataContext = ({ children }) => {
   const [querryState, setQuerry] = useState('')
-  const [ isResult ,setResult] = useState({
-    search:false,
-    genre:false,
-    country:false,
-  })
 
   const fetchingData = async (url , setData , setTotalPages) => {
     console.log(url);
@@ -35,7 +30,7 @@ export const DataContext = ({ children }) => {
   }
 
   return (
-    <DataProvider.Provider value={{fetchingData , setQuerry , querryState, isResult , setResult}} >
+    <DataProvider.Provider value={{fetchingData , setQuerry , querryState}} >
 
       {children}
 
