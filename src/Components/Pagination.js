@@ -1,7 +1,7 @@
 
 import React from "react";
 import { useState } from "react";
-import './pagination.css'
+import './css/pagination.css'
 
 const Pagination = ({ page, setPage, totalPage }) => {
       const [first ,setFirst] = useState(1)

@@ -4,7 +4,7 @@ import MovieCard from './MovieCard';
 import Pagination from './Pagination';
 import { useData } from '../context/DataContext';
 
-const MovieData = ({pagination, dataType, title , querryState ,isSearch,urlSearch , page, setPage }) => {
+const MovieData = ({pagination, dataType, title ,isSearch,urlSearch , page, setPage }) => {
   //Fetching Data Calling Function from context
    const{fetchingData} = useData();
   //  Defining States
@@ -40,7 +40,7 @@ const MovieData = ({pagination, dataType, title , querryState ,isSearch,urlSearc
         
       }} >
         { data.filter((item,ind)=>ind<18).map((movie) => {
-          return <MovieCard imgUrl={movie.poster_path} movieName={movie.title} key={movie.id} movieDate={movie.release_date}  />
+          return <MovieCard imgUrl={movie.poster_path} movieName={movie.title} key={movie.id} movieDate={movie.release_date} id={movie.id}  />
         })}
       </div>
     </div>

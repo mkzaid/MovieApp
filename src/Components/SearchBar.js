@@ -1,5 +1,5 @@
 import React, {  useRef, useState } from 'react';
-import './searchBar.css';
+import './css/searchBar.css';
 import { useNavigate } from 'react-router-dom';
 import imgDefault from '../img/demo.jpg'
 import { useData } from '../context/DataContext';
@@ -25,7 +25,7 @@ const SearchBar = () => {
         let value = encodeURIComponent(first)
        const url = `https://api.themoviedb.org/3/search/movie?query=${value}&include_adult=false&language=en-US&page=1`;
         fetchingData(url , setData , setTotalPage)
-      },100,e.currentTarget.value , setData , setTotalPage)
+      },1000,e.currentTarget.value , setData , setTotalPage)
     }
 
 
