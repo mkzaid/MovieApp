@@ -1,26 +1,53 @@
 import React from 'react'
 import '../Components/css/infoCard.css'
-const InfoCardMovie = ({imgUrl,movieName}) => {
+const InfoCardMovie = ({imgUrl,movieName, average, count , tagline , overView , date , duration , genres , company , languages }) => {
   return (
-    // <div className='parentContainer'>/
-     <div class="movie-card">
-        <img src={`https://image.tmdb.org/t/p/w500/${imgUrl}`} alt="Argyle Movie Poster" class="movie-poster"/>
-        <div class="movie-details">
-            <div class="movie-title">{movieName}</div>
-            <div class="movie-rating">IMDb: 6</div>
-            <div class="movie-plot">
-                When the plots of reclusive author Elly Conway's fictional espionage novels begin to mirror the covert actions of a real-life spy organization, quiet evenings at home become a thing of the past. Accompanied by her cat Alfie and Aiden, a cat-allergic spy, Elly races across the world to stay one step ahead of the killers as the line between Conway's fictional world and her real one begins to blur.
+     <div className="movieCard">
+        <div className="leftContainer">
+        <img src={`https://image.tmdb.org/t/p/w500/${imgUrl}`} alt="Argyle Movie Poster" className="movie-poster"/>
+        <div style={{marginTop:'10px'}} >
+        <p style={{color:'rgb(183, 124, 183)', fontWeight:'550', fontSize:'1.2rem' , display:'inline'}  } >{average}</p>
+        <p style={{display:'inline'}} > \ {count} voted</p>
+        </div>
+        <div className="ratingBar">
+        </div>
+        <div className="ratingbar">
+            <div className="rating">
+
             </div>
-            <div class="movie-info">
-                Released: 2024-01-31 | Duration: 139 min | Genre: Comedy, Action, Crime | Country: United Kingdom, United States Of America
+        </div>
+        <div className="likeDislikeContainer">
+            <button>
+                Like
+            </button>
+            <button>
+                Dislike
+            </button>
+        </div>
+        </div>
+        <div className="rightContainer">
+            <div className="btnContainer">
+                <button>Watch Now</button>
+                <button>Add to favorite</button>
             </div>
-            <div class="user-interaction">
-                <div class="thumbs-up">&#128077; 10</div>
-                <div class="thumbs-down">&#128078; 1</div>
+            <div className="movieTitle">
+                <p>{movieName}</p>
+            </div>
+            <div className="rating">
+            <p>{tagline}</p>
+            </div>
+            <div className="overview">
+            <p>{overView}</p>
+            </div>
+            <div className="movieInfo">
+                 <p> <strong>Released Date :    </strong>  {date}</p>
+                 <p> <strong>Duration : </strong> {duration}m  </p>
+                 <p> <strong>Genres :</strong> {genres&&genres.map((genre)=>`${genre.name} `)}</p>
+                 <p><strong>Production Company : </strong> {company&&company.map((company)=>`${company.name}, `)} </p>
+                 <p><strong>Language: </strong> {languages&&languages.map((obj)=>`${obj.english_name}, `)} </p>
             </div>
         </div>
     </div>
-    // </div>
   )
 }
 

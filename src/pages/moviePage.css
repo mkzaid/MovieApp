@@ -37,11 +37,10 @@
     cursor: pointer;
     scale: 1.5;
 }
-.movieCard{
+.movieCardSetter{
     position: absolute;
     bottom: -190px;
-    left: 2.5%;
     z-index: 3;
     width: 100%;
-  
+    display: block;
 }

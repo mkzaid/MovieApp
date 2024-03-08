@@ -95,3 +95,7 @@ padding: 0;
     align-items: center;
     
 }
+.likeDislikeContainer{
+    display: flex;
+    flex-direction: row;
+}
