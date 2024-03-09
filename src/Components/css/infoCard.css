@@ -23,14 +23,18 @@
 
 }
 .ratingBar{
+    position: relative;
     width: 180px;
     height: 4px;
     background-color: black;
     border-radius: 1px;
-    position: relative;
     margin: 8px 0px;
 }
-.ratingBar::before{
+.ratingLine{
+ height: 4px;
+ background-color: palevioletred;
+}
+/* .ratingBar::before{
     content: '';
     width: 60%;
     height: 100%;
@@ -40,7 +44,7 @@
     z-index: 3;
     background-color: palevioletred;
 
-}
+} */
 
 .likeDislikeContainer button{
     width: 85px;
@@ -104,11 +108,10 @@
     margin-top: 40px;
 }
 .movieInfo strong{
-    font-size: 1rem;
-    line-height: 1.3rem;
+    font-size: 1.rem;
     letter-spacing: 1px;
-    font-weight: 600;
+    font-weight: 500;
 }
 .movieInfo p{
-    
+    padding: 3px;
 }

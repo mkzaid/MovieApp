@@ -14,7 +14,6 @@ export const DataContext = ({ children }) => {
   const [querryState, setQuerry] = useState('')
 
   const fetchingData = async (url , setData , setTotalPages) => {
-    console.log(url);
       const options = {
       method: 'GET',
       headers: {
@@ -26,7 +25,6 @@ export const DataContext = ({ children }) => {
       const json = await res.json();
       setData(json.results)
       setTotalPages(json.total_pages)
-      console.log(json.total_pages);
   }
 
   return (

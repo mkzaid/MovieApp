@@ -2,33 +2,36 @@ import React, { useEffect, useState } from 'react'
 import SmallNavbar from '../Components/SmallNavbar'
 import demo from '../img/demo.jpg'
 import './moviePage.css'
-import { useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 import InfoCardMovie from '../Components/InfoCardMovie'
+import MovieData from '../Components/MovieData'
+
 const MoviePage = () => {
+    const location = useLocation()
+    window.scrollTo(0,0)
+    const [id , setId ] = useState()
     const [data ,setData] = useState({})
     const{ movieId } = useParams();
-    const   fetchingMovieDetain = async ()=>{
-
-        let url = `https://api.themoviedb.org/3/movie/${movieId}?api_key=eb8243911afceb1b5cc7d67399a4e07b`;
+    let url = `https://api.themoviedb.org/3/movie/${movieId}/recommendations?language=en-US&page=1`;
+    const   fetchingMovieDetain = async (movieid)=>{
+        
+        let url = `https://api.themoviedb.org/3/movie/${movieid}?api_key=eb8243911afceb1b5cc7d67399a4e07b`;
         let options = {
             method: 'GET',
             headers: {
                 accept: 'application/json',
                 Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlYjgyNDM5MTFhZmNlYjFiNWNjN2Q2NzM5OWE0ZTA3YiIsInN1YiI6IjY1Y2I3MjBiMWMwOWZiMDE4MjM4YTFhNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.9J_RqxFNdaKFt6A34JxC_bR_KMoZhqUeNlfP3CWivsc'
-              }}
-              console.log(1);
-              const res = await fetch(url, options)
-              const json = await res.json();
-              console.log(2);
-              setData(json)
-              console.log(3);
-              console.log(movieId);
-              console.log(data);
-    
+            }}
+            console.log(url);
+            const res = await fetch(url, options)
+            const json = await res.json();
+            setData(json)
     }
         useEffect(()=>{
-                 fetchingMovieDetain()
-        },[])
+                 fetchingMovieDetain(movieId)
+                 console.log('called',location);
+                 
+        },[location])
             return (
  <>
  <SmallNavbar/>
@@ -43,6 +46,9 @@ const MoviePage = () => {
     </div>
     <div className="movieCardSetter">
         <InfoCardMovie imgUrl={data.poster_path} movieName= {data.original_title} overView= {data.overview} average = { data.vote_average} count = {data.vote_count}  popularity= { data.popularity} tagline={ data.tagline} date = { data.release_date} duration = { data.runtime} genres = { data.genres} company = {data.production_companies} language = {data.spoken_languages}   />
+    </div>
+    <div className="recomendedMovies">
+        <MovieData  pagination={false} title={"You may also Like"} url={url}  />
     </div>
  </div>
    

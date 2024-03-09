@@ -4,21 +4,19 @@ import MovieCard from './MovieCard';
 import Pagination from './Pagination';
 import { useData } from '../context/DataContext';
 
-const MovieData = ({pagination, dataType, title ,isSearch,urlSearch , page, setPage }) => {
+const MovieData = ({pagination, dataType, title ,isSearch,urlSearch , page, setPage, url }) => {
   //Fetching Data Calling Function from context
    const{fetchingData} = useData();
   //  Defining States
    const [data, setData] = useState([])
    const [totalPages, setTotalPages] = useState(1)
   //Defining Variable
-  let url = `https://api.themoviedb.org/3/movie/${dataType}?language=en-US&page=1`;
+  // let url = `https://api.themoviedb.org/3/movie/${dataType}?language=en-US&page=1`;
   //Other Hooks
   useEffect(() => {
-    if(isSearch){
-      fetchingData(urlSearch , setData, setTotalPages)
-    }else{
-      fetchingData(url , setData , setTotalPages);
-    }
+
+    fetchingData(url , setData , setTotalPages);
+
   }, [page])
   // Rest of the Logic / Functionality
   return (

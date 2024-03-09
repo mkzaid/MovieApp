@@ -19,7 +19,7 @@ const ResultPage = () => {
     <>
     <div>
                 <SmallNavbar/>
-                <MovieData pagination={true} page={page}  setPage= {setPage}  urlSearch={url}  isSearch={true}  title={`Search Results for "${querryState}"`}  />
+                <MovieData pagination={true} page={page}  setPage= {setPage}  url={url}  title={`Search Results for "${querryState}"`}  />
     </div>
     </>
   )
