@@ -90,13 +90,13 @@
     cursor:default;
 }
 .rating p{
-    color: #f3d000;
+    color: rgb(183, 124, 183);
     font-weight: 400;
     font-size: .9rem;
     letter-spacing: 1px;
 }
 .overview p {
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     margin: 10px 0px;
     cursor: default;
 
@@ -109,7 +109,7 @@
 }
 .movieInfo strong{
     font-size: 1.rem;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
     font-weight: 500;
 }
 .movieInfo p{

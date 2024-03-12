@@ -1,6 +1,6 @@
 import React from 'react'
 import '../Components/css/infoCard.css'
-const InfoCardMovie = ({imgUrl,movieName, average, count , tagline , overView , date , duration , genres , company , languages }) => {
+const InfoCardMovie = ({imgUrl,movieName, average, count , tagline , overView , date , duration , genres , company , lan}) => {
 
 
  let votingLineWidth = Math.round(average*10)
@@ -48,7 +48,7 @@ const InfoCardMovie = ({imgUrl,movieName, average, count , tagline , overView , 
                  <p> <strong>Duration : </strong> {duration}m  </p>
                  <p> <strong>Genres :</strong> {genres&&genres.map((genre)=>`${genre.name} `)}</p>
                  <p><strong>Production Company : </strong> {company&&company.map((company)=>`${company.name}, `)} </p>
-                 { languages && <p><strong>Language: </strong> {languages.map((obj)=>obj.english_name)} </p>}
+                 {/* <p><strong>Language: </strong> {lan.map((obj)=>obj.english_name)} </p> */}
             </div>
         </div>
     </div>

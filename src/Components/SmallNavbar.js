@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../img/logo.png'
 import NavList from './NavList'
+import SearchBar from './SearchBar'
 
 const SmallNavbar = () => {
   return (

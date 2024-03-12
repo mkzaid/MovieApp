@@ -19,10 +19,13 @@ const MovieData = ({pagination, dataType, title ,isSearch,urlSearch , page, setP
 
   }, [page])
   // Rest of the Logic / Functionality
+  console.log(data);
   return (
 
     <>
-    <div style={{marginTop:'2rem'}} >
+    {
+         data.length>1 &&
+      <div style={{marginTop:'2rem'}} >
 
       <div className="titleDataComponent">
            <h1 style={{fontSize:'2rem' , fontWeight:'300', margin:'1rem 2rem' }} >
@@ -32,7 +35,7 @@ const MovieData = ({pagination, dataType, title ,isSearch,urlSearch , page, setP
 
       { pagination && <Pagination  totalPage={totalPages}   page = {page} setPage = {setPage} />}
       <div className='movieList' style={{
-         display: 'flex', flexDirection: 'row', flexWrap: 'wrap',
+        display: 'flex', flexDirection: 'row', flexWrap: 'wrap',
         
         margin: '0rem 1rem 0rem 2.2rem',
         
@@ -42,6 +45,7 @@ const MovieData = ({pagination, dataType, title ,isSearch,urlSearch , page, setP
         })}
       </div>
     </div>
+    }
     </>
 
   )

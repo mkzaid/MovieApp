@@ -17,7 +17,7 @@ const Navbar = () => {
                       </button>
                     </div>
             </div>
-            <h1>Find Movies, TV shows and more</h1>
+            <p>Find Movies, TV shows and more</p>
     </div>
   )
 }

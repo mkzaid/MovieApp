@@ -5,6 +5,7 @@ import './moviePage.css'
 import { useLocation, useParams } from 'react-router-dom'
 import InfoCardMovie from '../Components/InfoCardMovie'
 import MovieData from '../Components/MovieData'
+import Footer from '../Components/Footer'
 
 const MoviePage = () => {
     const location = useLocation()
@@ -45,11 +46,12 @@ const MoviePage = () => {
    </button>
     </div>
     <div className="movieCardSetter">
-        <InfoCardMovie imgUrl={data.poster_path} movieName= {data.original_title} overView= {data.overview} average = { data.vote_average} count = {data.vote_count}  popularity= { data.popularity} tagline={ data.tagline} date = { data.release_date} duration = { data.runtime} genres = { data.genres} company = {data.production_companies} language = {data.spoken_languages}   />
+        <InfoCardMovie imgUrl={data.poster_path} movieName= {data.original_title} overView= {data.overview} average = { data.vote_average} count = {data.vote_count}  popularity= { data.popularity} tagline={ data.tagline} date = { data.release_date} duration = { data.runtime} genres = { data.genres} company = {data.production_companies} lan = {data.spoken_languages}   />
     </div>
     <div className="recomendedMovies">
         <MovieData  pagination={false} title={"You may also Like"} url={url}  />
     </div>
+    <Footer/>
  </div>
    
  </>

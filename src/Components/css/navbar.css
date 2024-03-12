@@ -1,6 +1,6 @@
 
 #navbar{
-    height: 35vh;
+    height: 40vh;
     background: linear-gradient(to top, #120b31ba, #db3acdcc), url('../../img/joel-muniz-f86RSR2IlYw-unsplash.jpg');
     background-position:center center ;
     background-size: cover;
@@ -19,29 +19,36 @@
     flex-direction: row;
     width:100%;
     justify-content: space-around   ;
+    padding: 5px;
 }
 .navLinks{
     display: flex;
     flex-direction: row;
+     padding : 0px 250px;
 }
 .navLink{
   text-decoration: none;
   list-style: none;
-  margin:10px;
   color: white;
   cursor: pointer;
-  font-weight: 300  ;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 20px 0px;
+  margin: 0px 10px;
 }
 #login{
-    margin: 20px;
+    margin: 10px;
     border: none;
     width: 70px;
     height: 35px;
     border-radius: 4px;
+    cursor: pointer;
 }
 
-#navbar h1{
+#navbar p{
     text-align: center;
-    font-weight: 300;
+    font-size: 34px;
+    font-weight: 100;
     color: white;
+    margin-top: 30px;
 }

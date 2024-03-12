@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import MovieData from '../Components/MovieData'
 import { useData } from '../context/DataContext'
 import SmallNavbar from '../Components/SmallNavbar'
+import Footer from '../Components/Footer'
 
 const ResultPage = () => {
  const navigate = useNavigate();
@@ -20,6 +21,7 @@ const ResultPage = () => {
     <div>
                 <SmallNavbar/>
                 <MovieData pagination={true} page={page}  setPage= {setPage}  url={url}  title={`Search Results for "${querryState}"`}  />
+                <Footer/>
     </div>
     </>
   )
