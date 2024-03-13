@@ -1,0 +1,32 @@
+
+.listContainer{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: white;
+    color: black;
+    z-index: 23;
+    grid-template-columns: repeat(4,150px);
+    border-radius: 3px;
+    padding: 10px;
+    height: max-content;
+    display: none;
+}
+.hoverEffect{
+    position: relative;
+}
+.hoverEffect:hover .listContainer{
+    display: grid;
+}
+
+.listContainer li{
+    padding: 5px;
+    cursor: pointer;
+    margin: 3px;
+    height: max-content;
+}
+.listContainer li:hover{
+    background-color: royalblue;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}

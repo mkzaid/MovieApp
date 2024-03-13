@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import SmallNavbar from '../Components/SmallNavbar'
 import demo from '../img/demo.jpg'
-import './moviePage.css'
+import './css/moviePage.css'
 import { useLocation, useParams } from 'react-router-dom'
 import InfoCardMovie from '../Components/InfoCardMovie'
 import MovieData from '../Components/MovieData'

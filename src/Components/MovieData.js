@@ -24,7 +24,7 @@ const MovieData = ({pagination, dataType, title ,isSearch,urlSearch , page, setP
 
     <>
     {
-         data.length>1 &&
+        //  data.length>1 &&
       <div style={{marginTop:'2rem'}} >
 
       <div className="titleDataComponent">

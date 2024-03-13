@@ -17,6 +17,8 @@ padding: 0;
     position: relative;
     width: 11.5rem;
     height: 17rem;
+    background-color: grey;
+    border-radius: 10px;
     
 }
 .imgPre:hover > .hoverImg{
