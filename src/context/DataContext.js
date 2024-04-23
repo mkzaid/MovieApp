@@ -29,9 +29,7 @@ export const DataContext = ({ children }) => {
 
   return (
     <DataProvider.Provider value={{fetchingData , setQuerry , querryState}} >
-
       {children}
-
     </DataProvider.Provider>
   )
 }

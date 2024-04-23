@@ -38,7 +38,7 @@ const MoviePage = () => {
  <SmallNavbar/>
  <div className="playBtnContainer" >
     <div className="posterImg">
-        <img  src={`https://image.tmdb.org/t/p/original/${data.backdrop_path}`} alt="" />
+        <img  src={`https://image.tmdb.org/t/p/original/${data.backdrop_path}`} onError={(e)=>e.currentTarget.src=`https://image.tmdb.org/t/p/original/${data.poster_path}`} />
     </div>
     <div className='btnDiv'>
    <button>

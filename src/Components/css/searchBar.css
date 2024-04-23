@@ -34,13 +34,25 @@
 }
 
 #searchBtn{
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     border: none;
-    background-color: rgb(26, 123, 155);
-    margin-left:15px;
+    background-color: rgb(180, 65, 162);
+    margin-left:8px;
     cursor: pointer;
+}
+.crossBtn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: red;
 }
 
 /* Search Preview  */
@@ -55,13 +67,14 @@
     transform: translateY(-23px);
 }
 .searchPreview{
+    position: relative;
     overflow-y: scroll;
     width: 60%;
     /* border: 1px solid purple; */
     display: flex;
     box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;  ;
     flex-direction: column;
-    padding: 5px;
+    /* padding: 5px; */
     border-radius: 1rem;
    background-color: white;
    transform: translateX(-40px);
@@ -70,12 +83,14 @@
     display: none;
   }
 .oneMovie{
-    width: 90%;
-    /* border: 1px solid red; */
-    margin: 5px;
+    width: 100%;
+    padding: 10px 10px;
     display: flex;
     flex-direction: row;
     
+}
+.oneMovie:hover{
+    background-color: rgba(212, 212, 212, 0.311);
 }
 .oneMovie img{
     width: 80px;

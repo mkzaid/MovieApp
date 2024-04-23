@@ -35,7 +35,7 @@ const navigate = useNavigate()
         <div className='navLink hoverEffect '>
           Genre
         <div className="listContainer">
-          {genres.map((gen)=><li onClick={()=>{handleClick(gen.name)}} >{gen.name}</li>)}
+          {genres.map((gen,index)=><li  key={index} onClick={()=>{handleClick(gen.name)}} >{gen.name}</li>)}
         </div>
         </div>
         <Link className='navLink' to='/' >Country</Link>

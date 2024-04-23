@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 const ErroPage = () => {
     const navigate = useNavigate();
   return (
-    <div style={{display:'flex', backgroundColor:'black',flexDirection:'column' , width:'100%' , height:'100vh', justifyContent:'center' , alignItems:'center' }} >
+    <div style={{display:'flex', backgroundColor:'#000000bd',flexDirection:'column' , width:'100%' , height:'100vh', justifyContent:'center' , alignItems:'center' }} >
         <p style={{ display:'block', color:'red' , fontSize:'48px', letterSpacing:'1px' , fontWeight:'600'  }} > 404 Error .... Page Not Found</p>
       <p style={{display:'block',fontSize:'28px', color:'white'}} >Sorry for inconvinence. The current page is not available</p>
       <button   onClick={()=>navigate("/")} 
