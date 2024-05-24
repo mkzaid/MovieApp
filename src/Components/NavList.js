@@ -1,4 +1,5 @@
 import React , { useEffect, useState} from 'react'
+import { Typography } from "@mui/material"
 import "./css/navbar.css"
 import { Link, useNavigate } from 'react-router-dom'
 import './css/navlinks.css'

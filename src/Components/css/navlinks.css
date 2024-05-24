@@ -1,16 +1,17 @@
 
 .listContainer{
     position: absolute;
-    top: 60px;
+    top: 100%;
     left: 0;
     background-color: white;
     color: black;
-    z-index: 23;
+    z-index: 13;
     grid-template-columns: repeat(4,150px);
     border-radius: 3px;
     padding: 10px;
     height: max-content;
     display: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .hoverEffect{
     position: relative;
@@ -30,3 +31,13 @@
     color: white;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
+.navLink{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    cursor: pointer;
+    font-weight: 400;
+    letter-spacing: .5px;
+    font-size: 1rem;
+    padding: 10px 10px;
+  }

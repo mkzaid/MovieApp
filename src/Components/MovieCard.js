@@ -26,7 +26,7 @@ const MovieCard = ({imgUrl, movieName,movieDate, id}) => {
             <div className="cardDetails">
                 <p className="title" onClick={handleClick} >{movieName.substring(0,18)}</p>   
                 <div className="cardMinorDetails">
-                <p className='releaseDate' >{movieDate.split('-')[0]}</p>
+                <p className='releaseDate' >{ movieDate && movieDate.split('-')[0]}</p>
                 <p className='type' >Movie</p>
                 
              </div>
